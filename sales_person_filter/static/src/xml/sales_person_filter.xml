@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="sales_person_filter.CustomKanbanView">
+        <div class="sale_persons_view"
+             style="margin-bottom: 10px;">
+            <h6 for="user_id" style="margin-left: 5px; padding: 5px;">
+                SalesPerson:
+            </h6>
+            <select class="sales-person-render" name="user_id"
+                    style="width: 200px; height: 30px; margin-left:10px; padding: 5px; bottom: 5px;">
+                <option value="">Select a Salesperson</option>
+                <t t-foreach="data" t-as="sales_person">
+                    <t t-if="sales_person.display_name">
+                        <option t-att-value="sales_person.display_name">
+                            <t t-esc="sales_person.display_name"/>
+                        </option>
+                    </t>
+                </t>
+            </select>
+        </div>
+    </t>
+</templates>

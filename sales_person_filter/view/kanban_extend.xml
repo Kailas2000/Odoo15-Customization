@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="sales_person_filter_view_kanban_forecast" model="ir.ui.view">
+        <field name="name">sales_person.filter.view.kanban.forecast</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_kanban_view_leads"/>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="js_class">custom_kanban</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
